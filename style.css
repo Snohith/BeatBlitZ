@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(110, 109, 106);
+  font-family: "Tinos", serif;
+  overflow-x: hidden;
+}
+
+/* ----------------- NAVBAR ----------------- */
+nav {
+  height: 8vh;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.logo img {
+  height: 6vh;
+}
+
+/* ----------------- CONTAINER ----------------- */
+.container {
+  height: auto;
+  margin: 20px;
+  background-color: black;
+  color: white;
+  background-image: url('banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+h1 {
+  margin: 20px;
+  font-size: 2rem;
+  font-family: "Lavishly Yours", cursive;
+  text-align: center;
+}
+
+.songContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.songlist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid red;
+  border-radius: 20px;
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: background 0.3s ease;
+}
+
+.songlist:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.songlist img {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.songlist span {
+  font-size: 1rem;
+}
+
+.Timer i {
+  cursor: pointer;
+}
+
+/* ----------------- PLAYER ----------------- */
+.songPlayer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  margin: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+#progressBar {
+  width: 80%;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#beats {
+  height: 20px;
+  width: 120px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+.divButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.playButtons {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* ----------------- BUTTON STYLES ----------------- */
+button {
+  border: none;
+  color: white;
+  background: transparent;
+  margin: 5px;
+  font-family: "DM Serif Text", serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* ----------------- MEDIA QUERIES ----------------- */
+
+/* Tablets */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .songlist {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #progressBar {
+    width: 90%;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .songlist {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  .songlist img {
+    height: 40px;
+    width: 40px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .playButtons {
+    font-size: 1rem;
+  }
+
+  #progressBar {
+    width: 95%;
+  }
+}
